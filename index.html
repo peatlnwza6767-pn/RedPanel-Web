@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#08090c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RedPanel">
+<title>RED PANEL</title>
+<style>
+:root{color-scheme:dark;--bg:#07080b;--panel:#13151c;--red:#ff143f;--muted:#9296a6;--border:#481521}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:calc(env(safe-area-inset-top) + 14px) 16px calc(env(safe-area-inset-bottom) + 22px);font-size:14px}
+main{max-width:600px;margin:0 auto}.header{display:flex;align-items:center;gap:11px;margin:4px 0 22px}.logo{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--red);font-size:25px;font-weight:900}.brand{font-weight:950;letter-spacing:1.4px;font-size:20px}.sub{font-size:10px;letter-spacing:1px;color:var(--muted);margin-top:3px}.status{margin-left:auto;color:var(--red);font-size:10px;font-weight:800;display:flex;align-items:center;gap:6px}.dot{width:8px;height:8px;border-radius:50%;background:currentColor}.tabs{display:flex;gap:9px;margin-bottom:22px}.tab{flex:1;border:0;border-radius:11px;background:var(--panel);color:#fff;height:43px;font-weight:700}.tab.active{background:var(--red)}.hero{background:linear-gradient(135deg,#38101b,#13151c 72%);border:1px solid var(--border);border-radius:20px;padding:19px;margin-bottom:23px}.eyebrow,.section-title{font-size:10px;letter-spacing:1.5px;color:var(--muted);font-weight:800}.hero h1{font-size:25px;letter-spacing:-.5px;margin:10px 0}.muted{color:var(--muted)}.hero p{font-size:12px;line-height:1.5}.primary{width:100%;height:48px;background:var(--red);color:white;border:0;border-radius:12px;font-weight:900;letter-spacing:.5px;margin-top:8px}.section{margin:20px 0 10px}.section-title{font-size:13px;color:#fff;letter-spacing:1px}.section-sub{font-size:11px;color:var(--muted);margin-top:5px}.toggle-row{display:flex;align-items:center;gap:12px;background:var(--panel);border-radius:14px;padding:13px 14px;margin:8px 0}.toggle-copy{flex:1}.toggle-title{font-size:13px;font-weight:700}.toggle-desc{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4}.switch{appearance:none;width:43px;height:26px;border-radius:20px;background:#414451;position:relative;flex-shrink:0;transition:.18s}.switch:before{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;background:white;border-radius:50%;transition:.18s}.switch:checked{background:var(--red)}.switch:checked:before{left:20px}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.stat{background:var(--panel);border-radius:13px;padding:12px;min-width:0}.stat label{font-size:9px;color:var(--muted);letter-spacing:.8px}.stat strong{display:block;color:var(--red);font-size:11px;margin-top:8px;overflow-wrap:anywhere}.card{background:var(--panel);border-radius:16px;padding:16px;margin:12px 0}.range-head{display:flex;justify-content:space-between;font-weight:700;font-size:13px;margin:4px 0 12px}.range-head output{color:var(--red)}input[type=range]{width:100%;accent-color:var(--red);margin-bottom:15px}.profile{display:flex;align-items:center;text-align:left;width:100%;gap:10px;border:1px solid #292b35;background:var(--panel);padding:13px;border-radius:12px;color:#fff;margin:7px 0}.profile.selected{border-color:var(--red)}.profile .desc{font-size:10px;color:var(--muted);margin-top:4px}.profile .radio{margin-left:auto;color:var(--red);font-size:18px}.reset{width:100%;height:45px;border:1px solid var(--red);color:var(--red);background:transparent;border-radius:12px;font-weight:800;margin-top:16px}.footer{text-align:center;color:var(--muted);font-size:10px;letter-spacing:.6px;margin:28px 0 5px;line-height:1.8}.hidden{display:none!important}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:2px solid white;outline-offset:3px}
+</style>
+</head>
+<body><main>
+<header class="header"><div class="logo">ϟ</div><div><div class="brand">RED PANEL</div><div class="sub">CONTROL CENTER • iOS WEB</div></div><div class="status" id="status"><span class="dot"></span><span>READY</span></div></header>
+<nav class="tabs"><button class="tab active" id="dashTab">▦ &nbsp;Dashboard</button><button class="tab" id="settingsTab">☷ &nbsp;Settings</button></nav>
+<section id="dashboard">
+<div class="hero"><div class="eyebrow">SYSTEM STATUS</div><h1 id="heroTitle">READY TO START</h1><p class="muted" id="heroDesc">Activate the demo to change its state</p><button class="primary" id="activate">✓ &nbsp; ACTIVATE PANEL</button></div>
+<div class="section"><div class="section-title">QUICK CONTROLS</div><div class="section-sub">Tap a switch to change its state</div></div>
+<div class="toggle-row"><div class="toggle-copy"><div class="toggle-title">Floating widget</div><div class="toggle-desc">Show the in-app quick-control indicator</div></div><input class="switch" type="checkbox" id="widget" checked aria-label="Floating widget"></div>
+<div class="toggle-row"><div class="toggle-copy"><div class="toggle-title">Crosshair preview</div><div class="toggle-desc">Decorative preview preference</div></div><input class="switch" type="checkbox" id="crosshair" checked aria-label="Crosshair preview"></div>
+<div class="toggle-row"><div class="toggle-copy"><div class="toggle-title">Performance mode</div><div class="toggle-desc">Save this preference for this session</div></div><input class="switch" type="checkbox" id="performance" aria-label="Performance mode"></div>
+<div class="section"><div class="section-title">LIVE PREVIEW</div><div class="section-sub">Local settings only</div></div>
+<div class="stats"><div class="stat"><label>PANEL</label><strong id="statPanel">OFF</strong></div><div class="stat"><label>WIDGET</label><strong id="statWidget">VISIBLE</strong></div><div class="stat"><label>PROFILE</label><strong id="statProfile">BALAN</strong></div></div>
+</section>
+<section id="settings" class="hidden">
+<div class="section"><div class="section-title">TUNING</div><div class="section-sub">Adjustments update the preview immediately</div></div>
+<div class="card"><div class="range-head"><label for="sensitivity">Sensitivity</label><output id="sensitivityVal">55%</output></div><input id="sensitivity" type="range" min="0" max="100" value="55"><div class="range-head"><label for="refresh">Refresh target</label><output id="refreshVal">90 Hz</output></div><input id="refresh" type="range" min="30" max="120" step="30" value="90"></div>
+<div class="section"><div class="section-title">PROFILE</div><div class="section-sub">Choose a local preset</div></div>
+<button class="profile selected" data-profile="Balanced"><span><strong>Balanced</strong><div class="desc">Balanced default preferences</div></span><span class="radio">◉</span></button>
+<button class="profile" data-profile="Performance"><span><strong>Performance</strong><div class="desc">Prioritize responsiveness</div></span><span class="radio">○</span></button>
+<button class="profile" data-profile="Battery Saver"><span><strong>Battery Saver</strong><div class="desc">Prefer a lower refresh target</div></span><span class="radio">○</span></button>
+<button class="reset" id="reset">↻ &nbsp; RESET ALL SETTINGS</button>
+</section>
+<footer class="footer">☷ &nbsp; RED PANEL • UI DEMO • v1.0<br>Controls affect this app's local interface only.</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);let active=false,profile='Balanced';
+function update(){ $('status').style.color=active?'#27df85':'var(--red)';$('status').lastElementChild.textContent=active?'ACTIVE':'READY';$('heroTitle').textContent=active?'ACCESS GRANTED':'READY TO START';$('heroDesc').textContent=active?'Local control panel is running':'Activate the demo to change its state';$('activate').innerHTML=active?'■ &nbsp; STOP PANEL':'✓ &nbsp; ACTIVATE PANEL';$('statPanel').textContent=active?'ON':'OFF';$('statWidget').textContent=$('widget').checked?'VISIBLE':'HIDDEN';$('statProfile').textContent=profile.slice(0,5).toUpperCase();}
+$('activate').addEventListener('click',()=>{active=!active;update()});
+['widget','crosshair','performance'].forEach(id=>$(id).addEventListener('change',update));
+$('dashTab').addEventListener('click',()=>showTab(false));$('settingsTab').addEventListener('click',()=>showTab(true));
+function showTab(settings){$('dashboard').classList.toggle('hidden',settings);$('settings').classList.toggle('hidden',!settings);$('dashTab').classList.toggle('active',!settings);$('settingsTab').classList.toggle('active',settings);window.scrollTo({top:0,behavior:'smooth'});}
+$('sensitivity').addEventListener('input',e=>$('sensitivityVal').textContent=e.target.value+'%');
+$('refresh').addEventListener('input',e=>$('refreshVal').textContent=e.target.value+' Hz');
+document.querySelectorAll('.profile').forEach(btn=>btn.addEventListener('click',()=>{profile=btn.dataset.profile;document.querySelectorAll('.profile').forEach(b=>{b.classList.toggle('selected',b===btn);b.querySelector('.radio').textContent=b===btn?'◉':'○'});$('refresh').value=profile==='Balanced'?90:profile==='Performance'?120:60;$('refreshVal').textContent=$('refresh').value+' Hz';update()}));
+$('reset').addEventListener('click',()=>{active=false;profile='Balanced';$('widget').checked=true;$('crosshair').checked=true;$('performance').checked=false;$('sensitivity').value=55;$('refresh').value=90;$('sensitivityVal').textContent='55%';$('refreshVal').textContent='90 Hz';document.querySelectorAll('.profile').forEach(b=>{let sel=b.dataset.profile==='Balanced';b.classList.toggle('selected',sel);b.querySelector('.radio').textContent=sel?'◉':'○'});showTab(false);update()});update();
+</script></body></html>
